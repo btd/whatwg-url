@@ -1,5 +1,5 @@
 {
-  "name": "whatwg-url",
+  "name": "whatwg-url-es5",
   "version": "6.1.0",
   "description": "An implementation of the WHATWG URL Standard's URL API and parsing machinery",
   "main": "lib1/public-api.js",
