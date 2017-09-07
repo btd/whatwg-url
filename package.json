@@ -2,10 +2,8 @@
   "name": "whatwg-url",
   "version": "6.1.0",
   "description": "An implementation of the WHATWG URL Standard's URL API and parsing machinery",
-  "main": "lib/public-api.js",
-  "files": [
-    "lib/"
-  ],
+  "main": "lib1/public-api.js",
+  "files": ["lib1/"],
   "author": "Sebastian Mayr <github@smayr.name>",
   "license": "MIT",
   "repository": "jsdom/whatwg-url",
@@ -15,6 +13,9 @@
     "webidl-conversions": "^4.0.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "domexception": "^1.0.0",
     "eslint": "^4.1.1",
     "istanbul": "~0.4.3",
@@ -25,7 +26,7 @@
     "webidl2js": "^7.1.0"
   },
   "scripts": {
-    "build": "node scripts/transform.js && node scripts/convert-idl.js",
+    "build": "node scripts/transform.js && node scripts/convert-idl.js && babel lib -d lib1",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha",
     "lint": "eslint .",
     "prepublish": "npm run build",
